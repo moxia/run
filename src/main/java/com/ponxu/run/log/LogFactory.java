@@ -9,7 +9,7 @@ import com.ponxu.run.log.loggers.Log4jLog;
 import com.ponxu.run.log.loggers.SysoLog;
 
 /**
- * ÈÕÖ¾
+ * æ—¥å¿—
  * 
  * @author xwz
  */
@@ -20,13 +20,13 @@ public class LogFactory {
 	private static String levelName = "debug";
 
 	static {
-		// ³õÊ¼»¯ÈÕÖ¾×é¼ş
-		// 1 ¼ì²éÊÇ·ñÓĞLog4j
+		// åˆå§‹åŒ–æ—¥å¿—ç»„ä»¶
+		// 1 æ£€æŸ¥æ˜¯å¦æœ‰Log4j
 		try {
 			Class.forName("org.apache.log4j.Logger");
 			logClass = Log4jLog.class;
 		} catch (/* ClassNotFound */Exception e) {
-			// 2 Ä¬ÈÏ
+			// 2 é»˜è®¤
 			try {
 				InputStream in = FileUtils.fromClassPath("run.properties");
 				Properties prop = new Properties();
